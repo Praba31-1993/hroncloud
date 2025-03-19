@@ -52,6 +52,7 @@ import {
     menuForSuperAdmin,
     menuItemForEmployee,
 } from "../reusableComponent/sidebarJson";
+import NavbarComponent from "../reusableComponent/appbar";
 
 const Sidebar = ({ children }: any) => {
     const [isOpen, setIsOpen] = useState(false);
@@ -64,9 +65,7 @@ const Sidebar = ({ children }: any) => {
     const [expanded, setExpanded] = React.useState<string | false>(false);
 
     const [auth, setAuth] = useState<string | null>(null);
-    const NavbarComponent = dynamic(() => import("../reusableComponent/appbar"), {
-        ssr: false,
-    });
+   
     const DraggableComponent = dynamic(() => import("../reusableComponent/draggable"), {
         ssr: false,
     });
