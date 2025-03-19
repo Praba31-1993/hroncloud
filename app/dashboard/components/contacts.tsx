@@ -56,7 +56,7 @@ export default function Contacts({ show, close }: any) {
 
     return (
         <section className={`showpopup ${show ? "showpopupactive" : ""}`}>
-            <div className="summarysection" style={{ width: "20vw" }}>
+            <div className="summarysection" style={{ width: "310px" }}>
                 <div className="container-fluid">
                     <div className="row">
                         <div className="col-12 text-end">
