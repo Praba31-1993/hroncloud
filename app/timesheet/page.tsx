@@ -6,6 +6,7 @@ import moment from "moment";
 import { useSelector } from "react-redux";
 import { RootState } from "../redux/store";
 import { TimesheetDataByMonth, holidayList, vacationList } from "../reusableComponent/JsonData";
+import Sidebar from "../sidebar/page";
 
 const Listofholidays = dynamic(() => import("./components/listofholidays"));
 const Timesheetaproover = dynamic(() => import("./components/listofholidays").then(mod => mod.Timesheetaproover));
@@ -18,7 +19,6 @@ const MonthlyCalendar = dynamic(() => import("../reusableComponent/calendar/mont
 const WeeklyCalendar = dynamic(() => import("../reusableComponent/calendar/weeklycalendar"));
 const SemiMonthlyCalendar = dynamic(() => import("../reusableComponent/calendar/semimonthlyCalendar"));
 const BiWeeklyCalendar = dynamic(() => import("../reusableComponent/calendar/biweeklycalendar"));
-const Sidebar = dynamic(() => import("../sidebar/page"), { ssr: false });
 
 export default function Timesheet() {
   const [showSummaryCards, setShowSummaryCards] = useState(false);
